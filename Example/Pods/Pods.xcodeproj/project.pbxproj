@@ -10,11 +10,11 @@
 		0E5540B85816D6F7B82DE7A0FAE0C6D8 /* Pods-SSSwiftUILoader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A76E29AAC79681CDB044C67D568DEF3 /* Pods-SSSwiftUILoader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		616EC1730DA4963966AE7DF9E0B86AC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		669FE214128042103DD5D733C25ABF32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		67066CCFAB1790BB7E1A49DA2B0DC794 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C3A9F7475BCB073EA718AFFF3DDD3 /* ReplaceMe.swift */; };
 		6F0EA8E4D940411691D3EEE6DF5A6674 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		707EF6B942C7C6A249F7AE2E4D309745 /* Pods-SSSwiftUILoader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1508442E130EE26657F69595394CA754 /* Pods-SSSwiftUILoader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77B974F5147977ED1F7CBB65AD9212FB /* SSSwiftUILoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30456C1EE9B80BC60A719C9A3FE3293C /* SSSwiftUILoader-dummy.m */; };
 		785E31D178FE2B72F9D5F2A49DEBAEF2 /* Pods-SSSwiftUILoader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E606A8C421EE46B6B723CB013CA4841 /* Pods-SSSwiftUILoader_Example-dummy.m */; };
+		844BD5F623D739FF00453C7A /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BD5F523D739FF00453C7A /* LoaderView.swift */; };
 		DD7C0CA00E4C89192E276BACFF415E1D /* Pods-SSSwiftUILoader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4718BD66DE913E8208C30E9DEA10802B /* Pods-SSSwiftUILoader_Tests-dummy.m */; };
 		DE2708C2DF77AFC4266ADEE222114C37 /* SSSwiftUILoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F583091EA1DF8A97FBC103BD68B147A /* SSSwiftUILoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -37,9 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14D6A4FB707A4C8DD161652F91B94292 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		14D6A4FB707A4C8DD161652F91B94292 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1508442E130EE26657F69595394CA754 /* Pods-SSSwiftUILoader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SSSwiftUILoader_Tests-umbrella.h"; sourceTree = "<group>"; };
-		29866864C67D3E47E3B216E0D5D43310 /* SSSwiftUILoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SSSwiftUILoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		29866864C67D3E47E3B216E0D5D43310 /* SSSwiftUILoader.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SSSwiftUILoader.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2F583091EA1DF8A97FBC103BD68B147A /* SSSwiftUILoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSSwiftUILoader-umbrella.h"; sourceTree = "<group>"; };
 		30456C1EE9B80BC60A719C9A3FE3293C /* SSSwiftUILoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSSwiftUILoader-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -48,17 +48,17 @@
 		448966C987C9CE4EA6DF3054A9C2CB6C /* Pods-SSSwiftUILoader_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSSwiftUILoader_Tests-Info.plist"; sourceTree = "<group>"; };
 		4718BD66DE913E8208C30E9DEA10802B /* Pods-SSSwiftUILoader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SSSwiftUILoader_Tests-dummy.m"; sourceTree = "<group>"; };
 		4A698CD69BD5CE4245D9185A97518186 /* Pods-SSSwiftUILoader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSSwiftUILoader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4CB55F97B9A16F03CFBDE67F8004B97C /* Pods_SSSwiftUILoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SSSwiftUILoader_Example.framework; path = "Pods-SSSwiftUILoader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57D96A9B813E047807913CAF1381BBD3 /* SSSwiftUILoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSSwiftUILoader.framework; path = SSSwiftUILoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB55F97B9A16F03CFBDE67F8004B97C /* Pods_SSSwiftUILoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSSwiftUILoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D96A9B813E047807913CAF1381BBD3 /* SSSwiftUILoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSSwiftUILoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6050C6268D5AD187182B4FE71BCCCE68 /* SSSwiftUILoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSSwiftUILoader-prefix.pch"; sourceTree = "<group>"; };
 		693B4D3BEC66AA7C2B5D470517133380 /* Pods-SSSwiftUILoader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSSwiftUILoader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		6A76E29AAC79681CDB044C67D568DEF3 /* Pods-SSSwiftUILoader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SSSwiftUILoader_Example-umbrella.h"; sourceTree = "<group>"; };
 		6E130D22D516DF37176E07E7EA72E7DA /* Pods-SSSwiftUILoader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SSSwiftUILoader_Example-frameworks.sh"; sourceTree = "<group>"; };
-		7026650959FF2978CB8A9511697BBA9F /* Pods_SSSwiftUILoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SSSwiftUILoader_Tests.framework; path = "Pods-SSSwiftUILoader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		725C3A9F7475BCB073EA718AFFF3DDD3 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SSSwiftUILoader/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		78B1A41BB272F7D71A0E3D3D32289F91 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7026650959FF2978CB8A9511697BBA9F /* Pods_SSSwiftUILoader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSSwiftUILoader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B1A41BB272F7D71A0E3D3D32289F91 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		844BD5F523D739FF00453C7A /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		99CDCB6D34725279E0B5BCF6E2F37D09 /* Pods-SSSwiftUILoader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SSSwiftUILoader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E606A8C421EE46B6B723CB013CA4841 /* Pods-SSSwiftUILoader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SSSwiftUILoader_Example-dummy.m"; sourceTree = "<group>"; };
 		A9E7A807DEAD0845F80C605FA6734165 /* Pods-SSSwiftUILoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSSwiftUILoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AA0BBC0DBE8F8AB9D90F0F114E13349A /* SSSwiftUILoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSSwiftUILoader-Info.plist"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		125FA02C72B6622B1D17C30AC1A4D14A /* SSSwiftUILoader */ = {
 			isa = PBXGroup;
 			children = (
-				725C3A9F7475BCB073EA718AFFF3DDD3 /* ReplaceMe.swift */,
+				844BD5F423D739F300453C7A /* Source */,
 				9FEC0E5F8064D4132B277B0736768D73 /* Pod */,
 				5C441F84038EBB3ED5A7DC7BD7992805 /* Support Files */,
 			);
@@ -148,6 +148,14 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SSSwiftUILoader";
+			sourceTree = "<group>";
+		};
+		844BD5F423D739F300453C7A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				844BD5F523D739FF00453C7A /* LoaderView.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		9FEC0E5F8064D4132B277B0736768D73 /* Pod */ = {
@@ -365,8 +373,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67066CCFAB1790BB7E1A49DA2B0DC794 /* ReplaceMe.swift in Sources */,
 				77B974F5147977ED1F7CBB65AD9212FB /* SSSwiftUILoader-dummy.m in Sources */,
+				844BD5F623D739FF00453C7A /* LoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +428,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SSSwiftUILoader_Example/Pods-SSSwiftUILoader_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SSSwiftUILoader_Example/Pods-SSSwiftUILoader_Example.modulemap";
@@ -454,7 +462,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader.modulemap";
 				PRODUCT_MODULE_NAME = SSSwiftUILoader;
@@ -485,7 +493,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SSSwiftUILoader_Example/Pods-SSSwiftUILoader_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SSSwiftUILoader_Example/Pods-SSSwiftUILoader_Example.modulemap";
@@ -518,7 +526,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SSSwiftUILoader_Tests/Pods-SSSwiftUILoader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SSSwiftUILoader_Tests/Pods-SSSwiftUILoader_Tests.modulemap";
@@ -583,13 +591,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -611,7 +618,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SSSwiftUILoader/SSSwiftUILoader.modulemap";
 				PRODUCT_MODULE_NAME = SSSwiftUILoader;
@@ -643,7 +650,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SSSwiftUILoader_Tests/Pods-SSSwiftUILoader_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SSSwiftUILoader_Tests/Pods-SSSwiftUILoader_Tests.modulemap";
@@ -712,7 +719,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
