@@ -18,7 +18,7 @@ public protocol LoaderConfiguration {
     var activityIndicatorStyle: UIActivityIndicatorView.Style { get set}
 }
 
-enum ConfigSettings {
+public enum ConfigSettings {
     case defaultSettings
     case customSettings(config: LoaderConfiguration)
     func configuration() -> LoaderConfiguration {
@@ -72,14 +72,14 @@ struct ActivityIndicator: UIViewRepresentable {
 }
 
 
-class SSLoader {
+public class SSLoader {
     
-    static var shared = SSLoader()
+    public static var shared = SSLoader()
     private var arrWindow = UIApplication.shared.windows
     private init() { }
     fileprivate var popupWindow: LoaderWindow?
     
-    func startloader(config: ConfigSettings = .defaultSettings) {
+    public func startloader(config: ConfigSettings = .defaultSettings) {
         let configuration = config.configuration()
         let windowScene = UIApplication.shared
             .connectedScenes
@@ -96,7 +96,7 @@ class SSLoader {
         }
     }
     
-    func stopLoader() {
+    public func stopLoader() {
         let alertwindows = UIApplication.shared.windows.filter { $0 is LoaderWindow }
         alertwindows.forEach { (window) in
             window.removeFromSuperview()
