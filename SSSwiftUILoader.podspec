@@ -33,7 +33,8 @@ TODO: Add long description of the pod here.
   s.platforms = {
     "ios": "13.0"
   }
-  
+  s.source_files = 'Source/**/*.swift'
+
   # s.resource_bundles = {
   #   'SSSwiftUILoader' => ['SSSwiftUILoader/Assets/*.png']
   # }
