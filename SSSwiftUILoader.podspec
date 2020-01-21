@@ -24,13 +24,15 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/simformsolutions/SSSwiftUILoader'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'simformsolutions' => 'developer@simformsolutions.com' }
+  s.author           = { 'Jasmine chaniara' => 'developer@simformsolutions.com' }
   s.source           = { :git => 'https://github.com/simformsolutions/SSSwiftUILoader.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'SSSwiftUILoader/Classes/**/*'
+  s.ios.deployment_target = '13.0'
+  s.swift_version = '5.0'
+  s.platforms = {
+    "ios": "13.0"
+  }
   
   # s.resource_bundles = {
   #   'SSSwiftUILoader' => ['SSSwiftUILoader/Assets/*.png']
