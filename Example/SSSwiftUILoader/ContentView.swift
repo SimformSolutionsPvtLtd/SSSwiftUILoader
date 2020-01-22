@@ -46,7 +46,7 @@ struct HomeList: View {
                          SSLoader.shared.startloader(config: .customSettings(config: CustomConfig()))
                          */
                     }) {
-                        Text("Loader more")
+                        Text("Show Loader")
                             .frame(width: UIScreen.main.bounds.width - 80, height: 40, alignment: .center)
                             .foregroundColor(Color.white)
                             .background(Color.black)
