@@ -61,7 +61,7 @@ struct ActivityIndicator: UIViewRepresentable {
     let color: UIColor
     
     func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: style)
+        let activityIndicator = UIActivityIndicatorView(style: style)
         activityIndicator.color = color
         return activityIndicator
     }
@@ -89,7 +89,6 @@ public class SSLoader {
             popupWindow = LoaderWindow(windowScene: windowScene)
             popupWindow?.frame = UIScreen.main.bounds
             popupWindow?.backgroundColor = .clear
-            //popupWindow?.windowLevel = UIWindow.Level.statusBar + 1
             popupWindow?.rootViewController = UIHostingController(rootView: LoadingView(isShowing: .constant(true), config: configuration))
             popupWindow?.rootViewController?.view.backgroundColor = configuration.loaderWindowColor
             popupWindow?.makeKeyAndVisible()
