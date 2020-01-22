@@ -4,7 +4,8 @@
 [![Version](https://img.shields.io/cocoapods/v/SSSwiftUILoader.svg?style=flat)](https://cocoapods.org/pods/SSSwiftUILoader)
 [![License](https://img.shields.io/cocoapods/l/SSSwiftUILoader.svg?style=flat)](https://cocoapods.org/pods/SSSwiftUILoader)
 [![Platform](https://img.shields.io/cocoapods/p/SSSwiftUILoader.svg?style=flat)](https://cocoapods.org/pods/SSSwiftUILoader)
-![Alt text](https://github.com/simformsolutions/SSSwiftUILoader/blob/master/SSSwiftUILoader.png?raw=true)
+![Alt text](https://github.com/simformsolutions/SSSwiftUILoader/blob/master/SSSwiftUILoader.png)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
