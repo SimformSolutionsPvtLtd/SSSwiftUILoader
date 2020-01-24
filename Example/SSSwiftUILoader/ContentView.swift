@@ -23,7 +23,7 @@ struct HomeList: View {
     var body: some View {
         NavigationView {
             ZStack {
-                List(self.disciplines, id: \.self) {  item  in
+                List(self.disciplines, id: \.self) { item  in
                     NavigationLink(destination: DetailView(discipline: "\(item)")) {
                         Image("img1")
                             .resizable()
@@ -63,6 +63,7 @@ struct HomeList: View {
         }
     }
 }
+
 /* Demo of custom configuration structure
 struct CustomConfig: LoaderConfiguration {
     var loaderTextColor: Color = .blue
@@ -74,6 +75,7 @@ struct CustomConfig: LoaderConfiguration {
     var activityIndicatorStyle: UIActivityIndicatorView.Style = .large
 }
 */
+
 struct DetailView: View {
     let discipline: String
     var body: some View {

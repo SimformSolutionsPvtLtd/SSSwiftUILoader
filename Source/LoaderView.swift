@@ -75,7 +75,6 @@ struct ActivityIndicator: UIViewRepresentable {
 public class SSLoader {
     
     public static var shared = SSLoader()
-    private var arrWindow = UIApplication.shared.windows
     private init() { }
     fileprivate var popupWindow: LoaderWindow?
     
