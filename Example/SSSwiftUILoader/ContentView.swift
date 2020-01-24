@@ -40,7 +40,8 @@ struct HomeList: View {
                 VStack {
                     Spacer()
                     Button(action: {
-                        SSLoader.shared.startloader(config: .defaultSettings)
+                        /* loader text is optinal*/
+                        SSLoader.shared.startloader("Loading...", config: .defaultSettings)
                         /*
                          For custom cunfiguration:-
                          SSLoader.shared.startloader(config: .customSettings(config: CustomConfig()))

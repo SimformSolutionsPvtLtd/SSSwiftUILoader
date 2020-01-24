@@ -35,13 +35,14 @@ struct LoadingView: View {
     
     @Binding var isShowing: Bool
     let config: LoaderConfiguration
+    let loaderText: String
     
     var body: some View {
         GeometryReader { geomerty in
             ZStack (alignment: .center) {
                 
                 VStack {
-                    Text("Loading.....").foregroundColor(self.config.loaderTextColor)
+                    Text(self.loaderText).foregroundColor(self.config.loaderTextColor)
                     ActivityIndicator(isAnimating: .constant(self.isShowing), style: self.config.activityIndicatorStyle, color: self.config.activityIndicatorColor)
                 }
                 .frame(width: geomerty.size.width / 2, height: geomerty.size.width / 2)
@@ -78,28 +79,12 @@ public class SSLoader {
     private init() { }
     fileprivate var popupWindow: LoaderWindow?
     
-    public func startloader(config: ConfigSettings = .defaultSettings) {
-        let configuration = config.configuration()
-        let windowScene = UIApplication.shared
-            .connectedScenes
-            .filter { $0.activationState == .foregroundActive }
-            .first
-        if let windowScene = windowScene as? UIWindowScene {
-            popupWindow = LoaderWindow(windowScene: windowScene)
-            popupWindow?.frame = UIScreen.main.bounds
-            popupWindow?.backgroundColor = .clear
-            popupWindow?.rootViewController = UIHostingController(rootView: LoadingView(isShowing: .constant(true), config: configuration))
-            popupWindow?.rootViewController?.view.backgroundColor = configuration.loaderWindowColor
-            popupWindow?.makeKeyAndVisible()
-        }
+    public func startloader(_ loaderText: String = "Loading...." ,config: ConfigSettings = .defaultSettings) {
+       setLoader(loaderText: loaderText, and: config)
     }
     
     public func stopLoader() {
-        let alertwindows = UIApplication.shared.windows.filter { $0 is LoaderWindow }
-        alertwindows.forEach { (window) in
-            window.removeFromSuperview()
-        }
-        popupWindow = nil
+        removeLoader()
     }
 
 }
@@ -117,3 +102,30 @@ struct DefaultConfig: LoaderConfiguration {
     var activityIndicatorStyle: UIActivityIndicatorView.Style = .large
 }
 
+extension SSLoader {
+    
+    private func setLoader(loaderText: String, and config: ConfigSettings) {
+        let configuration = config.configuration()
+               let windowScene = UIApplication.shared
+                   .connectedScenes
+                   .filter { $0.activationState == .foregroundActive }
+                   .first
+               if let windowScene = windowScene as? UIWindowScene {
+                   popupWindow = LoaderWindow(windowScene: windowScene)
+                   popupWindow?.frame = UIScreen.main.bounds
+                   popupWindow?.backgroundColor = .clear
+                   popupWindow?.rootViewController = UIHostingController(rootView: LoadingView(isShowing: .constant(true), config: configuration, loaderText: loaderText))
+                   popupWindow?.rootViewController?.view.backgroundColor = configuration.loaderWindowColor
+                   popupWindow?.makeKeyAndVisible()
+               }
+    }
+    
+    private func removeLoader() {
+        let alertwindows = UIApplication.shared.windows.filter { $0 is LoaderWindow }
+        alertwindows.forEach { (window) in
+            window.removeFromSuperview()
+        }
+        popupWindow = nil
+    }
+    
+}
