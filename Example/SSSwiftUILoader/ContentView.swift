@@ -18,7 +18,7 @@ struct ContentView: View {
 }
 
 struct HomeList: View {
-    let timer = Timer.publish(every: 10, on: .main, in: .commonModes).autoconnect()
+    let timer = Timer.publish(every: 10, on: .main, in: RunLoop.Mode.common).autoconnect()
     var disciplines: [Int]
     var body: some View {
         NavigationView {
