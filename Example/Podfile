@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'SSSwiftUILoader_Example' do
   pod 'SSSwiftUILoader', :path => '../'
-
   target 'SSSwiftUILoader_Tests' do
     inherit! :search_paths
 
