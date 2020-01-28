@@ -9,7 +9,7 @@ import SwiftUI
 /// Description Here
 public protocol LoaderConfiguration {
     /// To set loader background color.
-    var loaderBackgourndColor: Color { get set}
+    var loaderBackgroundColor: Color { get set}
     /// To set loading text color.
     var loaderTextColor: Color { get set}
     /// It will set corner radius.
@@ -51,7 +51,7 @@ private struct LoadingView: View {
                     ActivityIndicator(isAnimating: .constant(self.isShowing), style: self.config.activityIndicatorStyle, color: self.config.activityIndicatorColor)
                 }
                 .frame(width: geomerty.size.width / 2, height: geomerty.size.width / 2)
-                .background(self.config.loaderBackgourndColor)
+                .background(self.config.loaderBackgroundColor)
                 .cornerRadius(self.config.loaderCornerRadius)
                 .opacity(self.isShowing ? 1 : 0)
             }
@@ -107,7 +107,7 @@ private class LoaderWindow: UIWindow {
 /// Default loader settings
 struct DefaultConfig: LoaderConfiguration {
     var loaderTextColor: Color = .white
-    var loaderBackgourndColor: Color = .secondary
+    var loaderBackgroundColor: Color = .secondary
     var loaderCornerRadius: CGFloat =  10.0
     var loaderWindowColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.5)
     var activityIndicatorColor: UIColor = .white

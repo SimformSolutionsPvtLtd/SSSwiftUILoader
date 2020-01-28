@@ -41,7 +41,7 @@ struct HomeList: View {
                     Spacer()
                     Button(action: {
                         /* loader text is optinal*/
-                        SSLoader.shared.startloader("Loading...", config: .defaultSettings)
+                        SSLoader.shared.startloader("SSLoader...", config: .defaultSettings)
                         /*
                          For custom cunfiguration:-
                          SSLoader.shared.startloader(config: .customSettings(config: CustomConfig()))
@@ -67,7 +67,7 @@ struct HomeList: View {
 /* Demo of custom configuration structure
 struct CustomConfig: LoaderConfiguration {
     var loaderTextColor: Color = .blue
-    var loaderBackgourndColor: Color = .red
+    var loaderBackground: Color = .red
     var loaderCornerRadius: CGFloat =  10.0
     var loaderWindowColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.5)
     var activityIndicatorColor: UIColor = .blue

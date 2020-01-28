@@ -34,7 +34,7 @@ pod 'SSSwiftUILoader'
   
      - It has default settings but you can also use custon setting if you want.
 
-           SSLoader.shared.startloader(config: .defaultSettings)
+           SSLoader.shared.startloader("SSLoader...", config: .defaultSettings)
         
     - For custom configuration below is the demo, you just need to confirm the LoaderConfiguration protocol as shown below.
 
@@ -42,7 +42,7 @@ pod 'SSSwiftUILoader'
 
            struct CustomConfig: LoaderConfiguration {
             var loaderTextColor: Color = .blue
-            var loaderBackgourndColor: Color = .red
+            var loaderBackgroundColor: Color = .red
             var loaderForeGroundColor: Color = .green
             var loaderCornerRadius: CGFloat =  10.0
             var loaderWindowColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.5)
