@@ -11,7 +11,7 @@ import SSSwiftUILoader
 
 struct ContentView: View {
     @State var isLoaderShowing = true
-    let disciplines = [1,2,3,4,5,6,7,8,9]
+    let disciplines = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     var body: some View {
         HomeList(disciplines: self.disciplines)
     }
@@ -32,7 +32,7 @@ struct HomeList: View {
                         VStack(alignment: .leading) {
                             Text("\(item)")
                                 .font(.headline)
-                            Text ("No of rooms ")
+                            Text("No of rooms")
                                 .font(.subheadline)
                         }
                     }
@@ -46,16 +46,15 @@ struct HomeList: View {
                          For custom cunfiguration:-
                          SSLoader.shared.startloader(config: .customSettings(config: CustomConfig()))
                          */
-                    }) {
+                    }, label: {
                         Text("Show Loader")
                             .frame(width: UIScreen.main.bounds.width - 80, height: 40, alignment: .center)
                             .foregroundColor(Color.white)
                             .background(Color.black)
                             .cornerRadius(20)
-                    }
+                    })
                     Spacer().frame(width: UIScreen.main.bounds.width - 80, height: 20, alignment: .center)
                 }
-                
             }
             .navigationBarTitle("Rooms")
         }
@@ -69,7 +68,6 @@ struct HomeList: View {
 struct CustomConfig: LoaderConfiguration {
     var loaderTextColor: Color = .blue
     var loaderBackground: Color = .red
-    var loaderForeGroundColor: Color = .green
     var loaderCornerRadius: CGFloat =  10.0
     var loaderWindowColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.5)
     var activityIndicatorColor: UIColor = .blue
