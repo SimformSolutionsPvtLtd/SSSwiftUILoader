@@ -9,7 +9,7 @@
 import SwiftUI
 
 public protocol LoaderConfiguration {
-    var loaderBackgourndColor: Color { get set}
+    var loaderBackgroundColor: Color { get set}
     var loaderForeGroundColor: Color { get set}
     var loaderTextColor: Color { get set}
     var loaderCornerRadius: CGFloat { get set}
@@ -46,7 +46,7 @@ struct LoadingView: View {
                     ActivityIndicator(isAnimating: .constant(self.isShowing), style: self.config.activityIndicatorStyle, color: self.config.activityIndicatorColor)
                 }
                 .frame(width: geomerty.size.width / 2, height: geomerty.size.width / 2)
-                .background(self.config.loaderBackgourndColor)
+                .background(self.config.loaderBackgroundColor)
                 .foregroundColor(self.config.loaderForeGroundColor)
                 .cornerRadius(self.config.loaderCornerRadius)
                 .opacity(self.isShowing ? 1 : 0)
@@ -79,7 +79,7 @@ public class SSLoader {
     private init() { }
     fileprivate var popupWindow: LoaderWindow?
     
-    public func startloader(_ loaderText: String = "Loading...." ,config: ConfigSettings = .defaultSettings) {
+    public func startloader(_ loaderText: String = "" ,config: ConfigSettings = .defaultSettings) {
        setLoader(loaderText: loaderText, and: config)
     }
     
@@ -94,7 +94,7 @@ fileprivate class LoaderWindow: UIWindow {
 
 struct DefaultConfig: LoaderConfiguration {
     var loaderTextColor: Color = .white
-    var loaderBackgourndColor: Color = .secondary
+    var loaderBackgroundColor: Color = .secondary
     var loaderForeGroundColor: Color = .primary
     var loaderCornerRadius: CGFloat =  10.0
     var loaderWindowColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 0.5)
