@@ -34,7 +34,7 @@ pod 'SSSwiftUILoader'
   
      - It has default settings but you can also use custon setting if you want.
 
-           SSLoader.shared.startloader(config: .defaultSettings)
+           SSLoader.shared.startloader("SSLoader...", config: .defaultSettings)
         
     - For custom configuration below is the demo, you just need to confirm the LoaderConfiguration protocol as shown below.
 
