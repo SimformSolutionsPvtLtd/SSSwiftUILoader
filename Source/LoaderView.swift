@@ -14,7 +14,7 @@ public protocol LoaderConfiguration {
     var loaderTextColor: Color { get set}
     /// It will set corner radius.
     var loaderCornerRadius: CGFloat { get set}
-    /// It will set the backgroud color of whole screen.
+    /// It will set the background color of whole screen.
     var loaderWindowColor: UIColor { get set}
     /// Set activity indicator color.
     var activityIndicatorColor: UIColor { get set}
